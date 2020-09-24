@@ -1,0 +1,43 @@
+{
+    "name": "odoo-snippets",
+    "version": "0.1.0",
+    "publisher": "lgallo",
+    "displayName": "Odoo Snippets",
+    "description": "Useful Odoo snippets for developers",
+    "icon": "images/icon.png",
+    "license": "SEE LICENSE IN LICENSE",
+    "author": {
+        "name": "Lisandro Gallo",
+        "email": "lgallo@pm.me"
+    },
+    "engines": {
+        "vscode": "^1.49.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "odoo",
+        "snippets",
+        "python",
+        "xml"
+    ],
+    "bugs": {
+        "url": "https://github.com/lisandrogallo/vscode-odoo-snippets/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lisandrogallo/vscode-odoo-snippets"
+    },
+    "contributes": {
+        "snippets": [{
+                "language": "python",
+                "path": "./snippets/python.json"
+            },
+            {
+                "language": "xml",
+                "path": "./snippets/xml.json"
+            }
+        ]
+    }
+}

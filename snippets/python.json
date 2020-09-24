@@ -1,0 +1,242 @@
+{
+    "manifest": {
+        "prefix": "omanifest",
+        "body": [
+            "{",
+            "\t'name': '${1}',",
+            "\t'version': '${2:13.0.1.0.0}',",
+            "\t'summary': '${3}',",
+            "\t'description': '${4}',",
+            "\t'category': '${5}',",
+            "\t'author': '${6}',",
+            "\t'maintainer': '${7}',",
+            "\t'website': '${8}',",
+            "\t'license': '${9:LGPL-3}',",
+            "\t'contributors': [",
+            "\t\t'${10}',",
+            "\t],",
+            "\t'depends': [",
+            "\t\t'${11}',",
+            "\t],",
+            "\t'external_dependencies': {",
+            "\t\t'python': [",
+            "\t\t\t'${12}',",
+            "\t\t],",
+            "\t},",
+            "\t'data': [",
+            "\t\t'${13}',",
+            "\t],",
+            "\t'installable': ${14|True,False|},",
+            "\t'auto_install': ${15|True,False|},",
+            "\t'application': ${16|True,False|}",
+            "}\n$0"
+        ],
+        "description": "Manifest file"
+    },
+    "model": {
+        "prefix": "omodel_new",
+        "body": [
+            "from odoo import _, api, fields, models",
+            "\n\nclass ${1:ModuleName}(models.${2|Model,AbstractModel,TransientModel|}):",
+            "\t_name = '${2:module.name}'",
+            "\t_description = '${3:New Description}'",
+            "\n\tname = fields.Char(${4:string='${5}'})",
+            "$0"
+        ],
+        "description": "Model"
+    },
+    "model_inherit": {
+        "prefix": "omodel_inherit",
+        "body": [
+            "from odoo import _, api, fields, models",
+            "\n\nclass ${1:ModuleName}(models.Model):",
+            "\t_inherit = '${2:module.name}'",
+            "\n\tname = fields.Char(${4:string='${5}'})",
+            "$0"
+        ],
+        "description": "Inherited model"
+    },
+    "model_test": {
+        "prefix": "omodel_test",
+        "body": [
+            "from odoo.tests.common import TransactionCase",
+            "\n\nclass Test${1:ModuleName}(TransactionCase):",
+            "\n\tdef setUp(self):",
+            "\t\tsuper(Test${1:ModuleName}, self).setUp()",
+            "$0"
+        ],
+        "description": "Test class"
+    },
+    "import": {
+        "prefix": "oimport",
+        "body": [
+            "from odoo import${1: _,}${2: api,}${3: fields,}${4: models}\n$0"
+        ],
+        "description": "Imports"
+    },
+    "field_binary": {
+        "prefix": "ofield_binary",
+        "body": [
+            "${1:new_field} = fields.Binary(string='${2}')\n$0"
+        ],
+        "description": "Binary field"
+    },
+    "field_boolean": {
+        "prefix": "ofield_boolean",
+        "body": [
+            "${1:new_field} = fields.Boolean(string='${2}')\n$0"
+        ],
+        "description": "Boolean field"
+    },
+    "field_char": {
+        "prefix": "ofield_char",
+        "body": [
+            "${1:field_name} = fields.Char(string='${2}')\n$0"
+        ],
+        "description": "Char field"
+    },
+    "field_date": {
+        "prefix": "ofield_date",
+        "body": [
+            "${1:new_field} = fields.Date(string='${2}')\n$0"
+        ],
+        "description": "Date field"
+    },
+    "field_datetime": {
+        "prefix": "ofield_datetime",
+        "body": [
+            "${1:new_field} = fields.Datetime(string='${2}')\n$0"
+        ],
+        "description": "Datetime field"
+    },
+    "field_float": {
+        "prefix": "ofield_float",
+        "body": [
+            "${1:new_field} = fields.Float(string='${2}', digits=(${3:total, decimal}))\n$0"
+        ],
+        "description": "Float field"
+    },
+    "field_html": {
+        "prefix": "ofield_html",
+        "body": [
+            "${1:new_field} = fields.Html(string='${2}')\n$0"
+        ],
+        "description": "HTML field"
+    },
+    "field_integer": {
+        "prefix": "ofield_integer",
+        "body": [
+            "${1:new_field} = fields.Integer(string='${2}')\n$0"
+        ],
+        "description": "Integer field"
+    },
+    "field_text": {
+        "prefix": "ofield_text",
+        "body": [
+            "${1:new_field} = fields.Text(string='${2}')\n$0"
+        ],
+        "description": "Text field"
+    },
+    "field_selection": {
+        "prefix": "ofield_selection",
+        "body": [
+            "${1:new_field} = fields.Selection(string='${2}', selection=[('${3:key}', '${4:value}'), ('${5:key}', '${6:value}')${7}])\n$0"
+        ],
+        "description": "Selection field"
+    },
+    "field_many2one": {
+        "prefix": "ofield_m2o",
+        "body": [
+            "${1:new_field} = fields.Many2one(comodel_name='${2}', string='${3}')\n$0"
+        ],
+        "description": "Many2one field"
+    },
+    "field_many2many": {
+        "prefix": "ofield_m2m",
+        "body": [
+            "${1:new_field} = fields.Many2many(comodel_name='${2}', string='${3}')\n$0"
+        ],
+        "description": "Many2many field"
+    },
+    "field_one2many": {
+        "prefix": "ofield_o2m",
+        "body": [
+            "${1:new_field} = fields.One2many(comodel_name='${2}', inverse_name='${3}', string='${4}')\n$0"
+        ],
+        "description": "One2many field"
+    },
+    "method_create": {
+        "prefix": "omethod_create",
+        "body": [
+            "@api.model",
+            "def create(self, values):",
+            "\t# CODE HERE",
+            "\treturn super(${1:ClassName}, self).create(values)\n$0"
+        ],
+        "description": "create() method"
+    },
+    "method_write": {
+        "prefix": "omethod_write",
+        "body": [
+            "@api.multi",
+            "def write(self, values):",
+            "\t# CODE HERE",
+            "\treturn super(${1:ClassName}, self).write(values)\n$0"
+        ],
+        "description": "write() method"
+    },
+    "method_unlink": {
+        "prefix": "omethod_unlink",
+        "body": [
+            "@api.multi",
+            "def unlink(self):",
+            "\t# CODE HERE",
+            "\treturn super(${1:ClassName}, self).unlink()\n$0"
+        ],
+        "description": "unlink() method"
+    },
+    "method_compute": {
+        "prefix": "omethod_compute",
+        "body": [
+            "${1:field_name} = fields.${2|Char,Text,Html,Boolean,Integer,Float,Date,Datetime,Binary,Monetary|}(compute='_compute_${1}', string='${3}')",
+            "\n@api.depends('${0}')",
+            "def _compute_${1}(self):",
+            "\tpass\n"
+        ],
+        "description": "Compute method"
+    },
+    "method_compute_extended": {
+        "prefix": "omethod_compute_ext",
+        "body": [
+            "${1:field_name} = fields.${2|Char,Text,Html,Boolean,Integer,Float,Date,Datetime,Binary|}(compute='_compute_${1}', inverse='_inverse_${1}', search='_search_${1}', string='${3}')",
+            "",
+            "@api.depends('${0}')",
+            "def _compute_${1}(self):",
+            "\tpass",
+            "def _inverse_${1}(self):",
+            "\tpass",
+            "def _search_${1}(self, ${4:operator}, ${5:value}):",
+            "\tpass\n"
+        ],
+        "description": "Extended Compute method"
+    },
+    "method_constrains": {
+        "prefix": "omethod_constrains",
+        "body": [
+            "@api.constrains('${1:field_name}')",
+            "def _check_${1:field_name}(self):",
+            "\t# CODE HERE",
+            "\traise ValidationError()\n$0"
+        ],
+        "description": "Constraint method"
+    },
+    "method_onchange": {
+        "prefix": "omethod_onchange",
+        "body": [
+            "@api.onchange('${1:field_name}')",
+            "def _onchange_${1:field_name}(self):",
+            "\t${0:pass}\n"
+        ],
+        "description": "Onchange method"
+    }
+}
