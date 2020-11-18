@@ -77,91 +77,91 @@
     "field_binary": {
         "prefix": "ofield_binary",
         "body": [
-            "${1:new_field} = fields.Binary(string='${2}')\n$0"
+            "${1:new_field} = fields.Binary(${2:string='${3}'})$0"
         ],
         "description": "Binary field"
     },
     "field_boolean": {
         "prefix": "ofield_boolean",
         "body": [
-            "${1:new_field} = fields.Boolean(string='${2}')\n$0"
+            "${1:new_field} = fields.Boolean(${2:string='${3}'})$0"
         ],
         "description": "Boolean field"
     },
     "field_char": {
         "prefix": "ofield_char",
         "body": [
-            "${1:field_name} = fields.Char(string='${2}')\n$0"
+            "${1:field_name} = fields.Char(${2:string='${3}'})$0"
         ],
         "description": "Char field"
     },
     "field_date": {
         "prefix": "ofield_date",
         "body": [
-            "${1:new_field} = fields.Date(string='${2}')\n$0"
+            "${1:new_field} = fields.Date(${2:string='${3}'})$0"
         ],
         "description": "Date field"
     },
     "field_datetime": {
         "prefix": "ofield_datetime",
         "body": [
-            "${1:new_field} = fields.Datetime(string='${2}')\n$0"
+            "${1:new_field} = fields.Datetime(${2:string='${3}'})$0"
         ],
         "description": "Datetime field"
     },
     "field_float": {
         "prefix": "ofield_float",
         "body": [
-            "${1:new_field} = fields.Float(string='${2}', digits=(${3:total, decimal}))\n$0"
+            "${1:new_field} = fields.Float(${2:string='${3}', }${4:digits=(${5:total}, ${6:decimal})})$0"
         ],
         "description": "Float field"
     },
     "field_html": {
         "prefix": "ofield_html",
         "body": [
-            "${1:new_field} = fields.Html(string='${2}')\n$0"
+            "${1:new_field} = fields.Html(${2:string='${3}'})$0"
         ],
         "description": "HTML field"
     },
     "field_integer": {
         "prefix": "ofield_integer",
         "body": [
-            "${1:new_field} = fields.Integer(string='${2}')\n$0"
+            "${1:new_field} = fields.Integer(${2:string='${3}'})$0"
         ],
         "description": "Integer field"
     },
     "field_text": {
         "prefix": "ofield_text",
         "body": [
-            "${1:new_field} = fields.Text(string='${2}')\n$0"
+            "${1:new_field} = fields.Text(${2:string='${3}'})$0"
         ],
         "description": "Text field"
     },
     "field_selection": {
         "prefix": "ofield_selection",
         "body": [
-            "${1:new_field} = fields.Selection(string='${2}', selection=[('${3:key}', '${4:value}'), ('${5:key}', '${6:value}')${7}])\n$0"
+            "${1:new_field} = fields.Selection(${2:string='${3}', }selection=[('${4:key}', '${5:value}'), ('${6:key}', '${7:value}')${8}])$0"
         ],
         "description": "Selection field"
     },
     "field_many2one": {
         "prefix": "ofield_m2o",
         "body": [
-            "${1:new_field} = fields.Many2one(comodel_name='${2}', string='${3}')\n$0"
+            "${1:new_field} = fields.Many2one(comodel_name='${2}'${3:, string='${4}'})$0"
         ],
         "description": "Many2one field"
     },
     "field_many2many": {
         "prefix": "ofield_m2m",
         "body": [
-            "${1:new_field} = fields.Many2many(comodel_name='${2}', string='${3}')\n$0"
+            "${1:new_field} = fields.Many2many(comodel_name='${2}'${3:, string='${4}'})$0"
         ],
         "description": "Many2many field"
     },
     "field_one2many": {
         "prefix": "ofield_o2m",
         "body": [
-            "${1:new_field} = fields.One2many(comodel_name='${2}', inverse_name='${3}', string='${4}')\n$0"
+            "${1:new_field} = fields.One2many(comodel_name='${2}', inverse_name='${3}'${4:, string='${5}'})$0"
         ],
         "description": "One2many field"
     },
