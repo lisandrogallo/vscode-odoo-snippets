@@ -29,7 +29,7 @@
             "\t'installable': ${14|True,False|},",
             "\t'auto_install': ${15|True,False|},",
             "\t'application': ${16|True,False|}",
-            "}\n$0"
+            "}$0"
         ],
         "description": "Manifest file"
     },
@@ -38,9 +38,9 @@
         "body": [
             "from odoo import _, api, fields, models",
             "\n\nclass ${1:ModuleName}(models.${2|Model,AbstractModel,TransientModel|}):",
-            "\t_name = '${2:module.name}'",
-            "\t_description = '${3:New Description}'",
-            "\n\tname = fields.Char(${4:string='${5}'})",
+            "\t_name = '${3:module.name}'",
+            "\t_description = '${4:New Description}'",
+            "\n\tname = fields.Char(${5:string='${6}'})",
             "$0"
         ],
         "description": "Model"
@@ -70,7 +70,7 @@
     "import": {
         "prefix": "oimport",
         "body": [
-            "from odoo import${1: _,}${2: api,}${3: fields,}${4: models}\n$0"
+            "from odoo import${1: _,}${2: api,}${3: fields,}${4: models}$0"
         ],
         "description": "Imports"
     },
@@ -171,7 +171,7 @@
             "@api.model",
             "def create(self, values):",
             "\t# CODE HERE",
-            "\treturn super(${1:ClassName}, self).create(values)\n$0"
+            "\treturn super(${1:ClassName}, self).create(values)$0"
         ],
         "description": "create() method"
     },
@@ -181,7 +181,7 @@
             "@api.multi",
             "def write(self, values):",
             "\t# CODE HERE",
-            "\treturn super(${1:ClassName}, self).write(values)\n$0"
+            "\treturn super(${1:ClassName}, self).write(values)$0"
         ],
         "description": "write() method"
     },
@@ -191,7 +191,7 @@
             "@api.multi",
             "def unlink(self):",
             "\t# CODE HERE",
-            "\treturn super(${1:ClassName}, self).unlink()\n$0"
+            "\treturn super(${1:ClassName}, self).unlink()$0"
         ],
         "description": "unlink() method"
     },
@@ -226,7 +226,7 @@
             "@api.constrains('${1:field_name}')",
             "def _check_${1:field_name}(self):",
             "\t# CODE HERE",
-            "\traise ValidationError()\n$0"
+            "\traise ValidationError()$0"
         ],
         "description": "Constraint method"
     },
