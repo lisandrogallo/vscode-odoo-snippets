@@ -124,11 +124,7 @@ See the contributing guidelines [here](https://github.com/lisandrogallo/vscode-o
 
 ## Release Notes
 
-### 0.1.0
-
-Initial release
-
-> Detailed release notes are available [here](https://github.com/lisandrogallo/vscode-odoo-snippets/blob/master/CHANGELOG.md).
+Detailed release notes are available [here](https://github.com/lisandrogallo/vscode-odoo-snippets/blob/master/CHANGELOG.md).
 
 ## Credits
 
