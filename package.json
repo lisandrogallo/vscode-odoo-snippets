@@ -1,49 +1,55 @@
 {
-	"name": "odoo-snippets",
-	"version": "0.1.1",
-	"publisher": "lgallo",
-	"displayName": "Odoo Snippets",
-	"description": "Useful Odoo snippets for developers",
-	"icon": "images/icon.png",
-	"license": "SEE LICENSE IN LICENSE",
-	"author": {
-		"name": "Lisandro Gallo",
-		"email": "lgallo@pm.me"
-	},
-	"engines": {
-		"vscode": "^1.49.0"
-	},
-	"categories": [
-		"Snippets"
-	],
-	"keywords": [
-		"odoo",
-		"snippets",
-		"python",
-		"xml"
-	],
-	"bugs": {
-		"url": "https://github.com/lisandrogallo/vscode-odoo-snippets/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/lisandrogallo/vscode-odoo-snippets"
-	},
-	"contributes": {
-		"snippets": [
-			{
-				"language": "python",
-				"path": "./snippets/python.json"
-			},
-			{
-				"language": "xml",
-				"path": "./snippets/xml.json"
-			}
-		]
-	},
-	"__metadata": {
-		"id": "3a308a58-44d1-4cbc-b200-d19972e830a6",
-		"publisherDisplayName": "Lisandro Gallo",
-		"publisherId": "076160c3-9f70-4f76-970d-ef03bb2058bb"
-	}
+    "name": "odoo-snippets",
+    "version": "0.2.0",
+    "publisher": "lgallo",
+    "displayName": "Odoo Snippets",
+    "description": "Useful Odoo snippets for developers",
+    "icon": "images/icon.png",
+    "license": "SEE LICENSE IN LICENSE",
+    "author": {
+        "name": "Lisandro Gallo",
+        "email": "lgallo@pm.me"
+    },
+    "engines": {
+        "vscode": "^1.49.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "odoo",
+        "snippets",
+        "python",
+        "xml"
+    ],
+    "bugs": {
+        "url": "https://github.com/lisandrogallo/vscode-odoo-snippets/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lisandrogallo/vscode-odoo-snippets"
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "python",
+                "path": "./snippets/python.json"
+            },
+            {
+                "language": "xml",
+                "path": "./snippets/xml.json"
+            }
+        ]
+    },
+    "__metadata": {
+        "id": "3a308a58-44d1-4cbc-b200-d19972e830a6",
+        "publisherDisplayName": "Lisandro Gallo",
+        "publisherId": "076160c3-9f70-4f76-970d-ef03bb2058bb"
+    },
+    "dependencies": {
+        "vsce": "^1.93.0"
+    },
+    "devDependencies": {
+        "esbuild": "^0.12.8"
+    }
 }

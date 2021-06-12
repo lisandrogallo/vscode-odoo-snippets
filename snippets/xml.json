@@ -370,10 +370,10 @@
     "server_action": {
         "prefix": "<server_action>",
         "body": [
-            "<record id=\"${1:model_name}_action_server\" model=\"ir.actions.server\">",
+            "<record id=\"action_${1:action_name}\" model=\"ir.actions.server\">",
             "\t<field name=\"name\">${2:Action Name}</field>",
-            "\t<field name=\"model_id\" ref=\"model_${1:model_name}\"/>",
-            "\t<field name=\"binding_model_id\" ref=\"model_${1:model_name}\"/>",
+            "\t<field name=\"model_id\" ref=\"model_${3:model_name}\"/>",
+            "\t<field name=\"binding_model_id\" ref=\"model_${3:model_name}\"/>",
             "\t<field name=\"state\">code</field>",
             "\t<field name=\"code\">${0}</field>",
             "</record>"
@@ -405,14 +405,15 @@
     "report_action": {
         "prefix": "<report_action>",
         "body": [
-            "<report",
-            "\tid=\"action_report_${1:model_name}\"",
-            "\tmodel=\"${2:model.name}\"",
-            "\tstring=\"${3:Report Name}\"",
-            "\treport_type=\"${4|qweb-pdf,qweb-html,qweb-text|}\"",
-            "\tname=\"${5:module_name.report_template_name}\"",
-            "\tfile=\"${5:module_name.report_template_name}\"",
-            "/>"
+            "<record id=\"action_${1:action_name}\" model=\"ir.actions.report\">",
+            "\t<field name=\"name\">${2:Report Name}</field>",
+            "\t<field name=\"model\">${3:model.name}</field>",
+            "\t<field name=\"report_type\">${4|qweb-pdf,qweb-html,qweb-text|}</field>",
+            "\t<field name=\"report_name\">${5:module_name.report_template_name}</field>",
+            "\t<field name=\"report_file\">${5:module_name.report_template_name}</field>",
+            "\t<field name=\"binding_model_id\" ref=\"model_${6:model_name}\"/>",
+            "\t<field name=\"binding_type\">report</field>",
+            "</record>"
         ],
         "description": "Report action"
     },

@@ -2,7 +2,7 @@
 
 This extension contains useful predefined code snippets for [Odoo](https://www.odoo.com/) developers.
 
-All snippets are for Odoo versions `10.0` and above, and follow the last [Odoo Guidelines](https://www.odoo.com/documentation/13.0/reference/guidelines.html).
+All snippets are for Odoo versions `10.0` and above, and follow the last [Odoo Guidelines](https://www.odoo.com/documentation/14.0/reference/guidelines.html).
 
 ## Installation
 
@@ -133,4 +133,4 @@ This extension includes some snippets based on two other different Visual Studio
 * [VscOdooSnippets](https://github.com/Droggol/VscOdooSnippets)
 * [vscode-odoo-snippets](https://github.com/mstuttgart/vscode-odoo-snippets)
 
-Snippets order and structure, prefix names and coding style are based on my daily use and some criteria of my preference, following the last [Odoo Guidelines](https://www.odoo.com/documentation/13.0/reference/guidelines.html).
+Snippets order and structure, prefix names and coding style are based on my daily use and some criteria of my preference, following the last [Odoo Guidelines](https://www.odoo.com/documentation/14.0/reference/guidelines.html).

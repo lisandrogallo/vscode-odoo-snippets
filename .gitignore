@@ -1,4 +1,6 @@
 .vscodeignore
-.env/**
-.nodeenv/**
-.vscode/**
+.env
+.nodeenv/
+.vscode/
+node_modules/
+package-lock.json
